@@ -1,0 +1,19 @@
+{% load bootstrap %}
+<html !DOCTYPE>
+<head>
+    <title>Formulario de Contacto con Django</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <h2 class="text-center text-muted">Formulario de Contacto</h2>
+        <form method="POST" action="" novalidate="novalidate">
+            {% csrf_token %}
+            {{ form|bootstrap }}
+            <input type="submit" value="Submit" class="btn btn-success pull-right">
+        </form>
+    </div>
+</div>
+</body>
+</html>
